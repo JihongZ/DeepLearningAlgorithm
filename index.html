@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Myplanet reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/myplanet.css">
+		<link rel="stylesheet" href="css/presentation.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="icon" href="lib/myplanet/logo/radiant-orange/mark-knockout.svg"/>
+
+		<!-- Printing and PDF exports -->
+		<script src="js/reveal-print.js"></script>
+	</head>
+	<body>
+		<div class="reveal pattern--random">
+			<div class="slides">
+				<section class="title" id="title">
+					<div class="grid-wrapper">
+						<div class="content">
+							<h1>Comprehensive Exam Oral Defense</h1>
+							<div class="description">
+								Model Selection Posterior Predictive Model Checking via Limited-information Indices for Bayesian Diagnostic Classification Modeling
+							</div>
+						</div>
+						<div class="credit">
+							<hr/>
+							<div class="label">Presented By</div>
+							<div class="name">Jihong Zhang</div>
+							<div class="role">Education Measurement and Statistics</div>
+						</div>
+					</div>
+				</section>
+				<section id="outline">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Outline</div>
+						</div>
+                        <div class="content">
+                        <ul>
+                            <li class="fragment">Background Info for the proposed method (5 mins)</li>
+                            <li class="fragment">Questions to be solved (3 mins)</li>
+                            <li class="fragment">Research Hypothesis (3 mins)</li>
+                            <li class="fragment">Objectives of Research (3 mins)</li>
+                            <li class="fragment">Procedure of the proposed method (2 mins)</li>
+                            <li class="fragment">Simulation Design (2 mins)</li>
+                            <li class="fragment">Limitations (2 mins)</li>
+                            <li class="fragment">Questions for Discussion</li>
+                        </ul>
+                        </div>
+					</div>
+				</section>
+                <section>
+                    <section class="quote color--midnight" id="quote--midnight">
+					<div class="grid-wrapper">
+                        <div class="header">
+						    <div class="logo"></div>
+                            <div class="section">Background Information</div>
+                        </div>
+						<blockquote>
+							<h2>
+								Diagnostic Classification Modeling
+							</h2>
+							<hr/>
+							<!-- <cite>Caption/Annotation/Citation</cite> -->
+                            <cite>
+                                <p>
+                                It is a statistical model used for diagnostic measurement, which aims to classify respondents according to multiple latent variables. It is also known as constrained version of latent class model.
+                                </p>
+                                <p class="fragment">
+                                For example, to measure different facilities for solving problems in a particular educational domain (e.g., "borrowing from whole-number part" in fraction substraction problmens)
+                                </p>
+                            </cite>
+						</blockquote>
+					</div>
+                    </section>
+                    <section class="quote color--light" id="quote--light">
+					<div class="grid-wrapper">
+                        <div class="header">
+						    <div class="logo"></div>
+                            <div class="section">Background Information</div>
+                        </div>
+						<blockquote>
+							<h4>
+								Diagnostic Classification Modeling
+							</h4>
+							<hr/>
+							<!-- <cite>Caption/Annotation/Citation</cite> -->
+                            <cite>
+                            <figure>
+                            <div class="r-stack">
+                                <img class="fragment" data-fragment-index="0" data-src="figures/fig1.png" alt="Typical PPMC Procedure" width="600" height="350">
+                                <figcaption class="fragment" aria-hidden="true"> Fig1. A DCM diagram with only one attribute</figcaption>
+                                <img class="fragment" data-src="figures/fig2.png" alt="DCM equation">
+                                <figcaption class="fragment" aria-hidden="true"> Fig2. A log-linear diagnostic model with two attributes</figcaption>
+                            </div>
+                            </figure>
+                            </cite>
+						</blockquote>
+					</div>
+				    </section>
+				</section>
+                
+                <section>
+                    <!-- PPMC: Verticle Slide 0 -->
+                    <section class="quote color--midnight" id="quote--midnight">
+					<div class="grid-wrapper">
+                        <div class="header">
+						    <div class="logo"></div>
+                            <div class="section">Background Information</div>
+                        </div>
+						<blockquote>
+							<h2>
+								Posterior Predictive Model Checking
+							</h2>
+							<hr/>
+							<!-- <cite>Caption/Annotation/Citation</cite> -->
+                            <cite>
+                                <p>PPMC is a method used to evaluate the goodness-of-fit of a diagnostic model in the full Bayesian framework. </p> 
+                                PPMC uses the posterior distribution of model parameters to predict what the observed data should look like following the analysis
+                                <cite align="right">-- Rupp et al., 2010</cite>
+                            </cite>
+						</blockquote>
+					</div>
+                    </section>
+                    <!-- PPMC: Verticle Slide 1 -->
+                    <section class="quote color--light" id="quote--light">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Background Information</div>
+                            </div>
+                            <blockquote>
+                                <h4>
+                                    Posterior Predictive Model Checking
+                                </h4>
+                                <hr/>
+                                <cite>
+                                    <ul class="fragment">
+                                        <li>Step 1: fit the model to data </li>
+                                        <li>Step 2: generate predictive data sets </li>
+                                        <li>Step 3: find the location of observed data sets</li>
+                                    </ul>
+                                    <hr/>
+                                    <img class="fragment" data-fragment-index="0" data-src="figures/ppmc.jpg" alt="Typical PPMC Procedure" width="600" height="350">
+                                    <figcaption class="fragment" aria-hidden="true"> Fig3. A DCM diagram with only one attribute</figcaption>
+                                </cite>
+                                
+                            </blockquote>
+                        </div>
+                    </section>
+				</section>
+                
+                <section>
+                    <!-- limited-info: Verticle Slide 0 -->
+                    <section class="quote color--midnight" id="quote--midnight">
+					<div class="grid-wrapper">
+                        <div class="header">
+						    <div class="logo"></div>
+                            <div class="section">Background Information</div>
+                        </div>
+						<blockquote>
+							<h2>
+								Limited information statistics
+							</h2>
+							<hr/>
+							<!-- <cite>Caption/Annotation/Citation</cite> -->
+                            <cite>
+                                <p>Compared to full-information statistics, limited-information statistics use marginal information of contingency tables.</p> 
+                                For example, M2 statistics (Maydeu-Olivares & Joe, 2005) uses up-to-second order marginal probability to calculate model-data fit.
+                            </cite>
+						</blockquote>
+					</div>
+                    </section>
+                    <!-- PPMC: Verticle Slide 1 -->
+                    <section class="quote color--light" id="quote--light">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Background Information</div>
+                            </div>
+                            <blockquote>
+                                <h4>
+                                    Limited-information statistics M2
+                                </h4>
+                                <hr/>
+                                <cite>
+                                    <img class="fragment" data-fragment-index="0" data-src="figures/limited_info.png" alt="Typical PPMC Procedure" width="1000" height="350">
+                                    <figcaption class="fragment" aria-hidden="true"> Fig4. Transformation from Full-information to Limited-information for three-item scale</figcaption>
+                                    <hr/>
+                                    <cite class="fragment">
+                                    The limited-information statistic have been proven to have lower Type I error rates in simulation settings (e.g., Hansen et al., 2016)
+                                    </cite>
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </section>
+				</section>
+
+                <section>
+                    <section class="quote color--midnight" id="quote--midnight">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Questions to be solved</div>
+                            </div>
+                            <blockquote>
+                                <p>
+                                    Q1: How to check <span class="fragment highlight-red">model-data fit</span> for diagnostic measurement under <span class="fragment highlight-green">full Bayesian</span> framework?
+                                </p>
+                                <hr/>
+                                <!-- <cite>Caption/Annotation/Citation</cite> -->
+                                <cite>
+                                    <ul>
+                                        <li class="fragment">Resampling or bootstrap Techniques [Not recommended]</li>
+                                        <li class="fragment">Posterior Predictive Model Checking [Recommended]</li>
+                                        <li class="fragment">Limited-information statistics [Recommended]</li>
+                                    </ul>
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </section>
+                    <section class="quote color--midnight" id="quote--midnight">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Questions to be solved</div>
+                            </div>
+                            <blockquote>
+                                <p>
+                                    Q2: How to solve sparseness in categorical data analysis?
+                                </p>
+                                <hr/>
+                                <cite>
+                                Contingency tables are said to be <b>sparse</b> when the ratio of the sample size to the number of cells is relatively small. 
+                                </cite>
+                                <cite align="right">--Alan Agresti, 1986</cite>
+                                <hr/>
+                                <cite>
+                                    <ul>
+                                        <li class="fragment">Limited-information statistics [Recommended]</li>
+                                    </ul>
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </section>
+                </section>
+
+
+                <section class="quote color--midnight" id="hypo">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Hypothesis</div>
+						</div>
+                        <blockquote>
+                        <div class="content">
+                        <ul>
+                            <li class="fragment">PPMC based on limited-information statistics could be potentially an alternative way for goodness-of-fit statistics under the framework of Bayesian Diagnostic Classification Modeling </li>
+                            <li class="fragment">The proposed method could be comparable to other information criteria such as WAIC, BIC in term of power</li>
+                        </ul>
+                        </div>
+                        </blockquote>
+					</div>
+				</section>
+				<!-- Team page can accommodate one or two profiles. -->
+				<section class="quote color--ice" id="purpose">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Objectives of the Research</div>
+						</div>
+                        <div class="content">
+                        <blockquote>
+                        <ul>
+                            <li class="fragment">Construct PPMC with limited-information indices in Bayesian LCDM</li>
+                            <li class="fragment">Simulation Study: Determine the performance of PPMC with limited-information indices under different conditions</li>
+                            <li class="fragment">Empirical Illustration: Investigate the usefulness of PPMC with limited-information statistics in real settings</li>
+                        </ul>
+                        </blockquote>
+                        </div>
+					</div>
+				</section>
+                
+                <section>
+                <section class="quote color--midnight" id="procedure">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Procedure of the proposed method</div>
+						</div>
+                        <div class="content">
+                        <blockquote>
+                        <ul>
+                            <li class="fragment">Step 1: both hypothesized DCM and the saturated model are fitted to observed responses</li>
+                            <li class="fragment">Step 2: Randomly draw the posterior predictive distribution of parameters to create predictive data sets</li>
+                            <li class="fragment">Step 3: compute descrepancy measure M2 using up-to-second order marginal probabilities for each data set</li>
+                            <li class="fragment">Step 4: Check model fit by comparing the empirical M2 distribution with Chi-sqaure distribution</li>
+                        </ul>
+                        </blockquote>
+                        </div>
+					</div>
+				</section>
+
+                <section class="quote color--midnight" id="procedure">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Procedure of the proposed method</div>
+						</div>
+                        <div class="content">
+                            <figure>
+                            <img data-src="figures/ppmc2.jpg" alt="Typical PPMC Procedure" />
+                            <figcaption aria-hidden="true">Fig5. Procedure Diagram</figcaption>
+                            </figure>
+                        </div>
+					</div>
+				</section>
+				</section>
+
+				<section class="quote color--ice" id="purpose">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Simulation Study settings</div>
+						</div>
+                        <blockquote>
+                        <cite>
+                            The goal of this study is to examine whthether the PPMC with M2 statistics can detect three types of Q-matrix misspecification (misspecification, underspecification, overspecification). In addition, to examine how sample size, attribute correaltions affect the performance.
+                        </cite>
+                        <hr/>
+                        <div class="content">
+                            <figure>
+                            <img data-src="figures/fig3.png" alt="Typical PPMC Procedure" />
+                            <figcaption aria-hidden="true">Table 2. Simulation Settings</figcaption>
+                            </figure>
+                        </div>
+                        </blockquote>
+					</div>
+				</section>
+
+                <section class="quote color--radiant" id="procedure">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Limitations or potential issues</div>
+						</div>
+                        <div class="content">
+                        <ul>
+                            <li class="fragment">This study did not examine the effect of sparseness on the proposed model. The idea is that this study focus on whether the proposal method could be compared to full-information statistics and other information criteria.</li>
+                            <li class="fragment">The test length factor may affect the power of the proposed method but we did not examine it.</li>
+                            <li class="fragment">There are multiple ways calculating limited-information statistics under the Bayesian framework. </li>
+                            <li class="fragment">Only up-to-bivariate statistics are used in this study which may limit the power of limited-information statistics.</li>
+                        </ul>
+                        </div>
+					</div>
+				</section>
+
+				<section class="quote color--midnight" id="quote--midnight">
+                    <div class="grid-wrapper">
+                        <div class="header">
+							<div class="section">Questions</div>
+						</div>
+                        <blockquote>
+				    	    <h2>Thank you! Any questions</h2>
+                        </blockquote>
+                    </div>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="js/reveal-init.js"></script>
+	</body>
+</html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/myplanet.css">
+		<link rel="stylesheet" href="css/presentation.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="icon" href="lib/myplanet/logo/radiant-orange/mark-knockout.svg"/>
+
+		<!-- Printing and PDF exports -->
+		<script src="js/reveal-print.js"></script>
+	</head>
+	<body>
+		<!-- <div class="reveal pattern--random"> -->
+		<div class="reveal pattern--night-sky">
+			<div class="slides">
+				<section class="title" id="title">
+					<div class="grid-wrapper">
+						<div class="content">
+							<h1>Group Discussion</h1>
+							<div class="description">
+								<h4>A Deep Learning Algorithm For High-Dimensional Exploratory Item Factor Analysis</h4>
+                            <hr/>
+                                Authors: Christorpher J. Urban and Daniel J. Bauer
+							</div>
+						</div>
+						<div class="credit">
+							<hr/>
+							<div class="label">Presented By</div>
+							<div class="name">Jihong Zhang</div>
+							<div class="role">Educational Measurement and Statistics</div>
+						</div>
+					</div>
+				</section>
+				<section id="outline" class="quote color--midnight" id="quote--light">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Outline</div>
+						</div>
+                        <blockquote>
+                        <div class="content">
+                        <ol>
+                            <li class="fragment">Background Information</li>
+                            <li class="fragment">Research Objective</li>
+                            <li class="fragment">Procedure of the proposed method</li>
+                            <li class="fragment">Numerical Example</li>
+                            <li class="fragment">Simulation Study</li>
+                            <li class="fragment">Extention of the proposed method</li>
+                        </ol>
+                        </div>
+                        </blockquote>
+					</div>
+				</section>
+                <section>
+                    <section class="quote color--midnight" id="quote--midnight">
+					<div class="grid-wrapper">
+                        <div class="header">
+						    <div class="logo"></div>
+                            <div class="section">Background Information</div>
+                        </div>
+						<blockquote>
+							<h4>
+								Amortized Variational Inference (AVI)
+							</h4>
+							<hr/>
+							<!-- <cite>Caption/Annotation/Citation</cite> -->
+                            <cite>
+                                <p>
+                                    Popular marginal maximimum likelihood-based parameter estimation methods included Metropolis-Hastings Robbins-Monro (MH-RM; Cai, 2010a; 2010b), stochastic expectation-maximization (stEM; Zhang, Chen, & Liu, 2020), limited-information approaches, and approaches ased on variational inference (VI). The constrained joiint maximum likelihood estimator (CJMLE) is another estimator which avoids for evaluating high-dimensional integrals.
+                                </p>
+                                <p>
+                                    Traditional variational inference (VI) fits a different approximate LV posterior for each observation, which quickly becomes computationally infeasible for large data sets (e.g., more than 10 latent factors and more than 10,000 respondents).
+                                </p>
+                                <p>
+                                    Amortized VI is a computationally efficient alternative to VI that uses an inference model to parameterize the approximate posterior. By sharing the parameters of the inference model across observations, AVI estimates a constant number of parameters regardless of the sample size.
+                                </p>
+                                <p>
+                                    The variational autoencoder (VAE) used in this study is an AVI algorithm whose inference model is an ANN. The FNN parameter &psi; are now shared across observations.
+                                </p>
+                                <p>
+                                    The unique advantage of the proposed method is it combines the asympotic properties of MML estimator with the computational efficiency of CJMLE
+                                </p>
+                            </cite>
+						</blockquote>
+					</div>
+                    </section>
+                    <section class="quote color--midnight" id="quote--midnight">
+					<div class="grid-wrapper">
+                        <div class="header">
+						    <div class="logo"></div>
+                            <div class="section">Background Information</div>
+                        </div>
+						<blockquote>
+							<h4>
+								Importance-weighted Autoencoder 
+							</h4>
+							<hr/>
+							<!-- <cite>Caption/Annotation/Citation</cite> -->
+                            <cite>
+                                <p>
+                                It is a algorithm for amortized IWVI whose inference model is a deep artifical neural network (ANN).
+                                </p>
+                                <p>
+                                Amortized IWVI for IFA maxminzes a lower bound called the importance-weighted evidence lower bound (IW-ELBO).
+                                </p>
+                                <div>
+                                    <img data-src="figures/iw_elbo.png" alt="ELBO" width="400" height="150">
+                                    <figcaption aria-hidden="true"> Fig.1 importance-weighted ELBO</figcaption>
+                                </div>
+                                <p>
+                                    When R=1, the IW-ELBO reduces to the ELBO. As R -> Infinity, the IW-ELBO converges to the marginal log-likelihood. IWVI is equivalent to MML estimation when the number of importance samples R equals inifinity. 
+                                </p>    
+                            </cite>
+						</blockquote>
+					</div>
+                    </section>
+				</section>
+
+                <section>
+                <section class="quote color--midnight" id="procedure">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">the proposed method (1): Hyperparameters</div>
+						</div>
+                        <div class="content">
+                        <blockquote>
+							<h4>
+								Importance-weighted Autoencoder
+							</h4>
+							<hr/>
+							<!-- <cite>Caption/Annotation/Citation</cite> -->
+                            <cite>
+                                <p>
+                                    When the inference model of IWVI is feedward neural network (FNN), the associated IWVI algorithm is called the importance-weighted autoencoder (IWAE).
+                                </p>
+                                <div>
+                                    <img data-src="figures/procedure_ifa.png" alt="ifa" width="600" height="400">
+                                    <figcaption aria-hidden="true"> Fig2 Procedure for Exploratory Factor Analysis</figcaption>
+                                </div>
+                            </cite>
+						</blockquote>
+                        </div>
+					</div>
+				</section>
+
+                <section class="quote color--midnight" id="procedure">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">the proposed method (2): Procedure</div>
+						</div>
+                        <div class="content">
+                             <img data-src="figures/procedure_ifa.png" alt="ifa" width="1000" height="700">
+                                    <figcaption aria-hidden="true"> Fig.2 Procedure for the proposed method</figcaption>
+                        </div>
+					</div>
+				</section>
+				</section>
+
+                <!-- The Objective of the reserch -->
+                <section>
+                    <section class="quote color--midnight" id="purpose">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Research Objective</div>
+                            </div>
+                            
+                            <div class="content">
+                                <blockquote>
+                                    <cite>
+                                        <ol>
+                                            <li>
+                                                To introduce the IWAE to the IFA literature and describe how it may be applied for Exploratory  analysis of polytomous item response data in frequentist setting
+                                            </li>
+                                            <li>
+                                                To conduct simulation studies to investigate the finite sample behavior the IWAE and to compare IWAE to MH-RM and CJMLE.
+                                            </li>
+                                        </ol>
+                                    </cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                        
+                    </section>
+                </section>
+
+
+
+                <!-- Numeric Examples & Simulation studies -->
+                <section>
+                    <section class="quote color--midnight" id="purpose">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Numerical Examples: Information</div>
+                            </div>
+                            <blockquote>
+                            <cite>
+                            <ul>
+                                <li>Software: PyTorch Ver. 1.1.6 without GPU Computing</li>
+                                <li>Data: Big-Five Personality Questionnaire</li>
+                                <li>Sample Size(N): 515,708</li>
+                                <li>Test Length: 50 items</li>
+                                <li>Item Type: 5-point likert scale</li>
+                                <li>Number of Attributes By Design: 5</li>
+                            </ul>  
+                            </cite>
+                            </blockquote>
+                        </div>
+                    </section>
+                    <section class="quote color--midnight" id="num_exp">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Numerical Examples: Results</div>
+                            </div>
+                            <blockquote>
+                            <cite>
+                            <ul>
+                                <li>Scree Plot demonstrated an "elbow" at P = 5</li>
+                                <li>Hidden Layer size is 130 and the learning rate &eta; = 0.005, and the number of IW samples R = 5, replicate the estimation 100 times</li>
+                                <li>mean fitting time was 170 seconds (SD = 47 seconds)</li>
+                                <li>mean RMSE for factor loadings: 0.018 (SD = 0.006)</li>
+                                <li>mean RMSE for item intercepts: 0.042 (SD = 0.018)</li>
+                                <li>mean RMSE for factor correlation: 0.028 (SD = 0.009)</li>
+                            </ul>  
+                            </cite>
+                            <hr/>
+                            <div class="content">
+                                <figure>
+                                    <img data-src="figures/scree_plot.png" alt="Scree Plot" style="width: 50%">
+                                    <figcaption aria-hidden="true">Fig.3 Scree Plot</figcaption>
+                                </figure>
+                            </div>
+                            </blockquote>
+                        </div>
+                    </section>
+                </section> 
+                
+                <section>
+                    <section class="quote color--midnight" id="purpose">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Simulation Studies: Settings</div>
+                            </div>
+                            <blockquote>
+                            <cite>
+                            <ul>
+                                <li>Data Generation: loings, intercepts, and factor correlations are rounded estimates  from the previous empirical example</li>
+                                <li>P = 5, J = 50, and C<sub>j</sub>=5</li>
+                                <li>Simple factor structure: cross-loings set to zero</li>
+                                <li>R = 1, 5, and 25</li>
+                                <li>100 reps for N = 500, 1000, 2000, and 2000 (R X N = 12 conditions)</li>
+                            </ul>  
+                            </cite>
+                            </blockquote>
+                        </div>
+                    </section>
+                    <section class="quote color--midnight" id="num_exp">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Simulation Studies: Results</div>
+                            </div>
+                            <blockquote>
+                            <cite>
+                            <ol>
+                                <li>All estimates become more accurate as N increase</li>
+                                <li>Factor correlations and intercepts estimates become more accurate with increasing R. Loadings are nearly unbiased as R increases.</li>
+                                <li>For each R setting, parameter MSE quickly decreases toward zero with increasing N; Increasing R tends to improve factor correlation estimates more than the other two parameters</li>
+                                <li>Increasing R from 1 to 5 decreases fitting time while increasing R from 5 to 25 increases fitting time. </li>
+                                <li>Factor scores estimates tend to be more accurate with increasing R and N
+                                </li>
+                            </ol>  
+                            </cite>
+                            
+                            </blockquote>
+                        </div>
+                    </section>
+
+                    <section class="quote color--midnight" id="num_exp">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Simulation Studies: IWVI vs. MH-RM</div>
+                            </div>
+                            <blockquote>
+                            <cite>
+                            <ol>
+                                <li>MH-RM's loadings and intercepts estimates are slightly more accurate  when N = 10,000</li>
+                                <li>Amortized IWVI produces more accurate factor correlation estimates across N setting</li>
+                                <li>IWAI is much faster than MHRM: MHRM - 8 mins(N = 1000) and 21 mins (N =10,000), whereas IWVI - stay around 3 minutes regardless of N</li>
+                            </ol>  
+                            </cite>
+                            </blockquote>
+                        </div>
+                    </section>
+                    
+                    <section class="quote color--midnight" id="num_exp">
+                        <div class="grid-wrapper">
+                            <div class="header">
+                                <div class="logo"></div>
+                                <div class="section">Simulation Studies: IWVI vs. CJMLE</div>
+                            </div>
+                            <blockquote>
+                            <cite>
+                            <ol>
+                                <li>CJMLE estimates loadings and intercepts inaccurately in the smallest (N = 2000, J =100) setting but is more accurate than IWVI in the highest settings </li>
+                                <li>IWVI is always faster than CJMLE</li>
+                            </ol>  
+                            </cite>
+                            </blockquote>
+                        </div>
+                    </section>
+
+                </section>
+
+
+                <section class="quote color--midnight" id="procedure">
+					<div class="grid-wrapper">
+						<div class="header">
+							<div class="logo"></div>
+							<div class="section">Extension of the proposed approach</div>
+						</div>
+                        <blockquote>
+                        <ol>
+                            <li class="fragment">CFA: the proposed method could be used to validate Q matrix by ensuring factor loadings are either freely estimated or set to zero</li>
+                            <li class="fragment">Regularized EFA: a viable alternative to factor rotation by adding a penalty function to optimization function</li>
+                            <li class="fragment">Approximate link function by fixing latent density</li>
+                        </ol>
+                        </blockquote>
+					</div>
+				</section>
+                
+                <!--Last Slide  -->
+				<section class="quote color--midnight" id="quote--midnight">
+                    <div class="grid-wrapper">
+                        <div class="header">
+							<div class="section">Questions</div>
+						</div>
+                        <blockquote>
+                            <h2>Thank you! Any questions</h2>
+                        </blockquote>
+                    </div>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="js/reveal-init.js"></script>
+	</body>
+</html>
