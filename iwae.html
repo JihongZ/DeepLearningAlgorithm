@@ -143,10 +143,7 @@
                                     <p>
                                         When the inference model of IWVI is feedward neural network (FNN), the associated IWVI algorithm is called the importance-weighted autoencoder (IWAE). Generally speaking, IWAE is one type of IWVI but using machine learning algorithm.
                                     </p>
-                                    <div>
-                                        <img data-src="figures/procedure_ifa.png" alt="ifa" width="600" height="400">
-                                        <figcaption aria-hidden="true"> Fig.2 Procedure for Exploratory Factor Analysis</figcaption>
-                                    </div>
+                                    
                                 </cite>
                             </blockquote>
                             </div>
@@ -181,7 +178,7 @@
                                     <cite>
                                         <ol>
                                             <li>
-                                                To introduce the IWAE to the IFA literature and describe how it may be applied for Exploratory  analysis of polytomous item response data in frequentist setting
+                                                To introduce the IWAE to the IFA literature and describe how it may be applied for Exploratory  analysis of polytomous item response data in frequentist setting.
                                             </li>
                                             <li>
                                                 To conduct simulation studies to investigate the finite sample behavior the IWAE and to compare IWAE to MH-RM and CJMLE.
@@ -227,14 +224,14 @@
                             </div>
                             <blockquote>
                             <cite>
-                            <ul>
-                                <li>Scree Plot demonstrated an "elbow" at P = 5</li>
-                                <li>Hidden Layer size is 130 and the learning rate &eta; = 0.005, and the number of IW samples R = 5, replicate the estimation 100 times</li>
-                                <li>mean fitting time was 170 seconds (SD = 47 seconds)</li>
-                                <li>mean RMSE for factor loadings: 0.018 (SD = 0.006)</li>
-                                <li>mean RMSE for item intercepts: 0.042 (SD = 0.018)</li>
-                                <li>mean RMSE for factor correlation: 0.028 (SD = 0.009)</li>
-                            </ul>  
+                                <ul>
+                                    <li>Scree Plot demonstrated an "elbow" at P = 5</li>
+                                    <li>Hidden Layer size is 130 and the learning rate &eta; = 0.005, and the number of IW samples R = 5, replicate the estimation 100 times</li>
+                                    <li>mean fitting time was 170 seconds (SD = 47 seconds)</li>
+                                    <li>mean RMSE for factor loadings: 0.018 (SD = 0.006)</li>
+                                    <li>mean RMSE for item intercepts: 0.042 (SD = 0.018)</li>
+                                    <li>mean RMSE for factor correlation: 0.028 (SD = 0.009)</li>
+                                </ul>  
                             </cite>
                             <hr/>
                             <div class="content">
@@ -258,9 +255,9 @@
                             <blockquote>
                             <cite>
                             <ul>
-                                <li>Data Generation: loings, intercepts, and factor correlations are rounded estimates  from the previous empirical example</li>
+                                <li>Data Generation: loadings, intercepts, and factor correlations are rounded estimates from the previous empirical example</li>
                                 <li>P = 5, J = 50, and C<sub>j</sub>=5</li>
-                                <li>Simple factor structure: cross-loings set to zero</li>
+                                <li>Simple factor structure: cross-loadings set to zero</li>
                                 <li>R = 1, 5, and 25</li>
                                 <li>100 reps for N = 500, 1000, 2000, and 2000 (R X N = 12 conditions)</li>
                             </ul>  
@@ -276,16 +273,15 @@
                             </div>
                             <blockquote>
                             <cite>
-                            <ol>
-                                <li>All estimates become more accurate as N increase</li>
-                                <li>Factor correlations and intercepts estimates become more accurate with increasing R. Loadings are nearly unbiased as R increases.</li>
-                                <li>For each R setting, parameter MSE quickly decreases toward zero with increasing N; Increasing R tends to improve factor correlation estimates more than the other two parameters</li>
-                                <li>Increasing R from 1 to 5 decreases fitting time while increasing R from 5 to 25 increases fitting time. </li>
-                                <li>Factor scores estimates tend to be more accurate with increasing R and N
-                                </li>
-                            </ol>  
+                                <ol>
+                                    <li>All estimates become more accurate as N increase</li>
+                                    <li>Factor correlations and intercepts estimates become more accurate with increasing R. Loadings are nearly unbiased as R increases.</li>
+                                    <li>For each R setting, parameter MSE quickly decreases toward zero with increasing N; Increasing R tends to improve factor correlation estimates more than the other two parameters</li>
+                                    <li>Increasing R from 1 to 5 decreases fitting time while increasing R from 5 to 25 increases fitting time. </li>
+                                    <li>Factor scores estimates tend to be more accurate with increasing R and N
+                                    </li>
+                                </ol>  
                             </cite>
-                            
                             </blockquote>
                         </div>
                     </section>
@@ -298,11 +294,11 @@
                             </div>
                             <blockquote>
                             <cite>
-                            <ol>
-                                <li>MH-RM's loadings and intercepts estimates are slightly more accurate  when N = 10,000</li>
-                                <li>Amortized IWVI produces more accurate factor correlation estimates across N setting</li>
-                                <li>IWAI is much faster than MHRM: MHRM - 8 mins(N = 1000) and 21 mins (N =10,000), whereas IWVI - stay around 3 minutes regardless of N</li>
-                            </ol>  
+                                <ol>
+                                    <li>MH-RM's loadings and intercepts estimates are slightly more accurate  when N = 10,000</li>
+                                    <li>Amortized IWVI produces more accurate factor correlation estimates across N setting</li>
+                                    <li>IWAI is much faster than MHRM: MHRM - 8 mins(N = 1000) and 21 mins (N =10,000), whereas IWVI - stay around 3 minutes regardless of N</li>
+                                </ol>  
                             </cite>
                             </blockquote>
                         </div>
@@ -318,7 +314,7 @@
                             <cite>
                             <ol>
                                 <li>CJMLE estimates loadings and intercepts inaccurately in the smallest (N = 2000, J =100) setting but is more accurate than IWVI in the highest settings </li>
-                                <li>IWVI is always faster than CJMLE</li>
+                                <li>IWVI is always faster than CJMLE in all settings.</li>
                             </ol>  
                             </cite>
                             </blockquote>
@@ -351,7 +347,10 @@
 							<div class="section">Questions</div>
 						</div>
                         <blockquote>
-                            <h2>Thank you! Any questions</h2>
+                            <ol>
+                                <li>How to decide on the settings for Hyperparameters before using IWAE?</li>
+                                <li>Do you think it would be a trend to combine machine learning algorithm in psychometric estimation in term of big data in education field?</li>
+                            </ol>
                         </blockquote>
                     </div>
 				</section>
