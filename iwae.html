@@ -75,7 +75,7 @@
 							<!-- <cite>Caption/Annotation/Citation</cite> -->
                             <cite>
                                 <p>
-                                    Popular marginal maximimum likelihood-based parameter estimation methods included Metropolis-Hastings Robbins-Monro (MH-RM; Cai, 2010a; 2010b), stochastic expectation-maximization (stEM; Zhang, Chen, & Liu, 2020), limited-information approaches, and approaches ased on variational inference (VI). The constrained joiint maximum likelihood estimator (CJMLE) is another estimator which avoids for evaluating high-dimensional integrals.
+                                    Popular marginal maximimum likelihood-based parameter estimation methods included Metropolis-Hastings Robbins-Monro (MH-RM; Cai, 2010a; 2010b), stochastic expectation-maximization (stEM; Zhang, Chen, & Liu, 2020), limited-information approaches, and the approaches based on variational inference (VI). The constrained joint maximum likelihood estimator (CJMLE) is another estimator which avoids for evaluating high-dimensional integrals.
                                 </p>
                                 <p>
                                     Traditional variational inference (VI) fits a different approximate LV posterior for each observation, which quickly becomes computationally infeasible for large data sets (e.g., more than 10 latent factors and more than 10,000 respondents).
@@ -110,14 +110,14 @@
                                 It is a algorithm for amortized IWVI whose inference model is a deep artifical neural network (ANN).
                                 </p>
                                 <p>
-                                Amortized IWVI for IFA maxminzes a lower bound called the importance-weighted evidence lower bound (IW-ELBO).
+                                Amortized IWVI for IFA maxminzes a lower bound called the <b>importance-weighted evidence lower bound</b> (IW-ELBO).
                                 </p>
                                 <div>
                                     <img data-src="figures/iw_elbo.png" alt="ELBO" width="400" height="150">
                                     <figcaption aria-hidden="true"> Fig.1 importance-weighted ELBO</figcaption>
                                 </div>
                                 <p>
-                                    When R=1, the IW-ELBO reduces to the ELBO. As R -> Infinity, the IW-ELBO converges to the marginal log-likelihood. IWVI is equivalent to MML estimation when the number of importance samples R equals inifinity. 
+                                    When Importance-weight samples R=1, the IW-ELBO reduces to the ELBO. As R -> Infinity, the IW-ELBO converges to the marginal log-likelihood. IWVI is equivalent to MML estimation when the number of importance samples R equals inifinity. 
                                 </p>    
                             </cite>
 						</blockquote>
@@ -135,13 +135,13 @@
                             <div class="content">
                             <blockquote>
                                 <h4>
-                                    Importance-weighted Autoencoder
+                                    Importance-weighted Autoencoder(cont.)
                                 </h4>
                                 <hr/>
                                 <!-- <cite>Caption/Annotation/Citation</cite> -->
                                 <cite>
                                     <p>
-                                        When the inference model of IWVI is feedward neural network (FNN), the associated IWVI algorithm is called the importance-weighted autoencoder (IWAE). Generally speaking, IWAE is one type of IWVI but using machine learning algorithm.
+                                        When the inference model of IWVI is feedward neural network (FNN), the associated IWVI algorithm is called the importance-weighted autoencoder (IWAE). Generally speaking, IWAE is one variation of IWVI but using machine learning algorithm.
                                     </p>
                                     <ol>
                                         <li>&eta;: the learning rate</li>
@@ -181,10 +181,10 @@
                                     <cite>
                                         <ol>
                                             <li>
-                                                To introduce the IWAE to the IFA literature and describe how it may be applied for Exploratory  analysis of polytomous item response data in frequentist setting.
+                                                To introduce the IWAE to the IFA literature and describe how it can be applied for Exploratory analysis of polytomous item response data in frequentist setting.
                                             </li>
                                             <li>
-                                                To conduct simulation studies to investigate the finite sample behavior the IWAE and to compare IWAE to MH-RM and CJMLE.
+                                                To conduct simulation studies to investigate the finite sample behavior of the IWAE and to compare it to MH-RM and CJMLE.
                                             </li>
                                         </ol>
                                     </cite>
@@ -214,6 +214,7 @@
                                 <li>Test Length: 50 items</li>
                                 <li>Item Type: 5-point likert scale</li>
                                 <li>Number of Attributes By Design: 5</li>
+                                <li>Model: Exploratory Item Factor Analysis</li>
                             </ul>  
                             </cite>
                             </blockquote>
@@ -228,8 +229,9 @@
                             <blockquote>
                             <cite>
                                 <ul>
-                                    <li>Scree Plot demonstrated an "elbow" at P = 5</li>
+                                    <li>Scree Plot of -2LL demonstrated an "elbow" at P = 5</li>
                                     <li>Hidden Layer size is 130 and the learning rate &eta; = 0.005, and the number of IW samples R = 5, replicate the estimation 100 times</li>
+                                    <hr>
                                     <li>mean fitting time was 170 seconds (SD = 47 seconds)</li>
                                     <li>mean RMSE for factor loadings: 0.018 (SD = 0.006)</li>
                                     <li>mean RMSE for item intercepts: 0.042 (SD = 0.018)</li>
@@ -239,7 +241,7 @@
                             <hr/>
                             <div class="content">
                                 <figure>
-                                    <img data-src="figures/scree_plot.png" alt="Scree Plot" style="width: 50%">
+                                    <img data-src="figures/scree_plot.png" alt="Scree Plot" style="width: 40%">
                                     <figcaption aria-hidden="true">Fig.3 Scree Plot</figcaption>
                                 </figure>
                             </div>
@@ -262,7 +264,7 @@
                                 <li>P = 5, J = 50, and C<sub>j</sub>=5</li>
                                 <li>Simple factor structure: cross-loadings set to zero</li>
                                 <li>R = 1, 5, and 25</li>
-                                <li>100 reps for N = 500, 1000, 2000, and 2000 (R X N = 12 conditions)</li>
+                                <li>100 reps for N = 500, 1000, 2000, and 10,000 (R X N = 12 conditions)</li>
                             </ul>  
                             </cite>
                             </blockquote>
@@ -315,10 +317,21 @@
                             </div>
                             <blockquote>
                             <cite>
-                            <ol>
-                                <li>CJMLE estimates loadings and intercepts inaccurately in the smallest (N = 2000, J =100) setting but is more accurate than IWVI in the highest settings </li>
-                                <li>IWVI is always faster than CJMLE in all settings.</li>
-                            </ol>  
+                                <h4>Data generation</h4>
+                                <ul>
+                                    <li>P = 10, (N,J) = (2000, 100), (10 000, 200), (50 000, 300), and (100000,400)</li>
+                                    <li>C<sub>j</sub>= 2</li>
+                                    <li>Model: Multidimensional 2PL</li>
+                                    <li>Item parameters are borrowed from Numerical examples</li>
+                                </ul>
+                                
+                                <hr>
+                                
+                                <ol>
+                                    <li>CJMLE estimates loadings and intercepts inaccurately in the smallest (N = 2000, J =100) setting but is more accurate than IWVI in the highest settings </li>
+                                    <li>IWVI is always faster than CJMLE in all settings. IWVI's median fitting time is 63 sec when (N, J) = (2000, 100) and increases over 6 mins when (N, J) = (100000, 400), whereas CJMLE increase from 73 sec to 43 mins.</li>
+                                    <li>Both estimators may speed up using GPU</li>
+                                </ol>  
                             </cite>
                             </blockquote>
                         </div>
@@ -334,11 +347,14 @@
 							<div class="section">Extension of the proposed approach</div>
 						</div>
                         <blockquote>
-                        <ol>
-                            <li class="fragment">CFA: the proposed method could be used to validate Q matrix by ensuring factor loadings are either freely estimated or set to zero</li>
-                            <li class="fragment">Regularized EFA: a viable alternative to factor rotation by adding a penalty function to optimization function</li>
-                            <li class="fragment">Approximate link function by fixing latent density</li>
-                        </ol>
+                            <cite>
+                                <ol>
+                                    <li class="fragment">CFA: the proposed method could be used to validate Q matrix by ensuring factor loadings are either freely estimated or set to zero</li>
+                                    <li class="fragment">Regularized EFA: a viable alternative to factor rotation by adding a penalty function to optimization function</li>
+                                    <li class="fragment">Approximate link function by fixing latent density</li>
+                                </ol>
+                            </cite>
+                        
                         </blockquote>
 					</div>
 				</section>
@@ -350,10 +366,14 @@
 							<div class="section">Questions</div>
 						</div>
                         <blockquote>
-                            <ol>
-                                <li>How to decide on the settings for Hyperparameters before using IWAE?</li>
-                                <li>Do you think it would be a trend to combine machine learning algorithm in psychometric estimation in term of big data in education field?</li>
-                            </ol>
+                            <cite>
+                                <ol>
+                                <li class="fragment">Tradition exploratory analysis uses scree plot with eigenvalue, while this study uses scree plot with negative LL. What do you think about this?</li>
+                                <li class="fragment">How to decide on the settings for Hyperparameters before using IWAE?</li>
+                                <li class="fragment">Do you think it would be a trend to combine machine learning algorithm in psychometric estimation in term of big data in education field?</li>
+                                </ol>
+                            </cite>
+                            
                         </blockquote>
                     </div>
 				</section>
